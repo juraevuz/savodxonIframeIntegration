@@ -9,5 +9,5 @@ Sizning saytingizda tahrir oynasi bor (masalan, TinyMCE yoki CKEditor). Saytingi
 Buning saytingizning tahrir oynasi joylashgan sahifasida popup yarating. Bu popup ichiga <iframe> element joylang. Tahrir oynasining o'zingiz istagan joyiga maxsus tugma joylang. Foydalanuvchi bu tugmani bosganda, popup oyna ochilib, tahrir oynasining HTML kodi nusxalab olinib, iframe ichiga postMassege yordamida uzatiladigan funskiya yozing (shunday funksiya musoli mijoz.html faylida keltirilgan).
   
 Etribor bering, ma'lumot quyidagi formatda yuborilishi kerak:
-var data = {type: 'postText', value: "Tahrir oynasi HTML kodi"};
+<pre>var data = {type: 'postText', value: "Tahrir oynasi HTML kodi"};</pre>
 
