@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script type="text/javascript">
+        window.addEventListener('message', getFromSavodxon, false);
+		
+		function getFromSavodxon(event) {			
+			if(event.origin == "https://savodxon.uz") {
+				console.log(event);
+				var data = event.data;
+				if (data.type == "returnText") {
+					document.getElementById('content').innerHTML = data.value;
+				}
+			}			
+        }
+		
+		function sendToSavodxon() {
+			var content = document.getElementById('content').innerHTML;
+			var data = {type: 'postText', value: content};
+			document.getElementById('savodxonFrame').contentWindow.postMessage(data, '*');
+		}
+		
+    </script>
+</head>
+<body>
+    <iframe id="savodxonFrame" src="http://savodxon.uz/iframe.php" width="800" height="500"></iframe>
+	<div id="content">
+		<p>Imlo hatolarga tekshirish uchun matn.</p>
+	</div>
+	<p>
+		<button onclick="sendToSavodxon()">Yuborish</button>
+	</p>
+</body>
+</html>
