@@ -5,7 +5,6 @@
 		
 		function getFromSavodxon(event) {			
 			if(event.origin == "https://savodxon.uz") {
-				console.log(event);
 				var data = event.data;
 				if (data.type == "returnText") {
 					document.getElementById('content').innerHTML = data.value;
